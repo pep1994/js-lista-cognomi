@@ -31,7 +31,6 @@ while (i < listSurnameOrder.length) {
   backContent = document.getElementById('surname-list').innerHTML;
 
   document.getElementById('surname-list').innerHTML = backContent + "<li>" + itemListSurnameOrder + "</li>";
-  console.log(backContent + itemListSurnameOrder);
 
   i++;
 }

@@ -22,13 +22,12 @@ body {
 #surname-list {
   list-style-type: none;
   padding-top: 50px;
-
 }
 
 #surname-list li {
   color: #ffa100;
   padding: 10px;
-  font-size: 30px;
+  font-size: 20px;
   opacity: 0;
   transform: translate(300px, -100px);
   animation: list-animate 2s forwards ease-out;
@@ -38,12 +37,28 @@ body {
 h1 {
   color: #fff;
   text-align: center;
-  padding: 100px 10px 0 10px;
-  font-size: 40px;
+  padding: 30px 10px 0 10px;
+  font-size: 35px;
   opacity: 0;
   transform: translateY(150px);
-  animation: title-animate 2s forwards ease-in-out 2.5s;
+  animation: title-animate 2s forwards ease-in-out 2.2s;
 }
+
+#unordered-list {
+  display: flex;
+  list-style-type: none;
+  padding-top: 10px;
+}
+
+#unordered-list li {
+  color: #ffa100;
+  padding: 10px;
+  font-size: 20px;
+  opacity: 0;
+  transform: translateY(-100px);
+  animation: unordered-list-animate 2s forwards linear 3s;
+}
+
 
 @keyframes list-animate {
   0% {
@@ -62,6 +77,19 @@ h1 {
   0% {
     opacity: 0;
     transform: translateY(150px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes unordered-list-animate {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
   }
 
   100% {
