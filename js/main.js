@@ -42,4 +42,4 @@ position = listSurnameOrder.indexOf(userSurname) + 1;
 
 
 // scrivo la posizione del cognome dell'utente all'interno della lista
-document.getElementById('list-position').innerHTML = "Il tuo cognome ora fa parte di una delle famiglie più importanti di Game of Thrones. Più precisamente è alla posizione gerarchica n° " + position + ".";
+document.getElementById('list-position').innerHTML = "<h1 id='title'>" + "Il tuo cognome ora fa parte di una delle famiglie più importanti di Game of Thrones. Più precisamente è alla posizione gerarchica n° " + position + "." + "</h1>";
