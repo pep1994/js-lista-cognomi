@@ -21,15 +21,16 @@ listSurname.push(userSurname);
 listSurnameOrder = listSurname.sort();
 
 
-// stampo la lista
+// stampo la lista dei cognomi in ordine alfabetico attraverso il ciclo
 var i = 0;
 
 while (i < listSurnameOrder.length) {
+
   itemListSurnameOrder = listSurnameOrder[i];
 
   backContent = document.getElementById('surname-list').innerHTML;
 
-  document.getElementById('surname-list').innerHTML = backContent + itemListSurnameOrder;
+  document.getElementById('surname-list').innerHTML = backContent + "<li>" + itemListSurnameOrder + "</li>";
   console.log(backContent + itemListSurnameOrder);
 
   i++;
