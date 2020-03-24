@@ -3,10 +3,10 @@
 // Scrivi anche la posizione della lista in cui il nuovo utente si trova
 
 
-var userSurname, listSurnameOrder, itemListSurnameOrder, backContent;
+var userSurname, listSurnameOrder, itemListSurnameOrder, backContent, position;
 
 // creo array con la lista dei cognomi
-var listSurname = ["Verdi", "Rossi", "Bianchi", "Neri", "Stark", "Lannister", "Martell", "Baratheon"];
+var listSurname = ["Blackwood", "Tully", "Targaryen", "Tyrell", "Stark", "Lannister", "Martell", "Baratheon", "Greyjoy", "Bolton"];
 
 
 // chiedo all'utente il suo cognome
@@ -35,3 +35,11 @@ while (i < listSurnameOrder.length) {
 
   i++;
 }
+
+
+// assegnazione variabile per la posizione del cognome utente all'interno della lista
+position = listSurnameOrder.indexOf(userSurname) + 1;
+
+
+// scrivo la posizione del cognome dell'utente all'interno della lista
+document.getElementById('list-position').innerHTML = "Il tuo cognome ora fa parte di una delle famiglie più importanti di Game of Thrones. Più precisamente è alla posizione gerarchica n° " + position + ".";
