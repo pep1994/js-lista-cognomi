@@ -3,14 +3,10 @@
 // Scrivi anche la posizione della lista in cui il nuovo utente si trova
 
 
-var userSurname, listSurnameOrder, itemListSurnameOrder, backContent, position, backContent2;
+var userSurname, listSurnameOrder, itemListSurnameOrder, backContent, position;
 
 // creo array con la lista dei cognomi
 var listSurname = ["Blackwood", "Tully", "Targaryen", "Tyrell", "Stark", "Lannister", "Martell", "Baratheon", "Greyjoy", "Bolton"];
-
-
-// dichiaro il nuovo arrey che sarà una copia della lista non ordinata
-
 
 
 // chiedo all'utente il suo cognome
@@ -19,7 +15,7 @@ userSurname = prompt("Inserisci il tuo cognome");
 
 // inserisco il cognome dell'utente nella lista cognomi
 listSurname.push(userSurname);
-var unorderedList = listSurname.slice();
+
 
 // ordino i cognomi della lista in ordine alfabetico
 listSurnameOrder = listSurname.sort();
@@ -40,24 +36,14 @@ while (i < listSurnameOrder.length) {
 }
 
 
-// assegnazione variabile per la posizione del cognome utente all'interno della lista
-position = listSurnameOrder.indexOf(userSurname) + 1;
+// calcolo la posizione del cognome utente attraverso il ciclo
+
+for (var j = 0; j < listSurnameOrder.length; j++) {
+  if (userSurname === listSurnameOrder[j]) {
+    position = j + 1;
+  }
+}
 
 
 // scrivo la posizione del cognome dell'utente all'interno della lista
 document.getElementById('list-position').innerHTML = "<h1 id='title'>" + "Il tuo cognome ora fa parte di una delle famiglie più importanti di Game of Thrones. Più precisamente è alla posizione gerarchica n° " + position + "." + "</h1>";
-
-
-
-
-// eseguo la stampa della lista non ordinata
-var j = 0;
-
-while (j < unorderedList.length) {
-
-  backContent2 = document.getElementById('unordered-list').innerHTML;
-
-  document.getElementById('unordered-list').innerHTML = backContent2 + "<li>" + unorderedList[j] + "</li>";
-
-  j++;
-}
